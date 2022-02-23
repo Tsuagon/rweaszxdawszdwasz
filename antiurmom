@@ -1,7 +1,12 @@
---Edited by VV_rk
--- date:7/15/17
 loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
+--- [[ The World ]] ---
+
+-- NOTE: This script can only work in R6 games and R6 compatible games.
+
+--Edited by VV_rk (And now Tsuagon)
+-- Date: 5/23/21
+
 function TakeDamage(hum, dmg)
   hum:TakeDamage(dmg)
 end
@@ -58,7 +63,7 @@ end
 tool = Instance.new("Tool")
 tool.CanBeDropped = false
 tool.RequiresHandle = false
-tool.Name = "Za Warudo"
+tool.Name = "The World"
 tool.Parent = plr.Backpack
 modz = Instance.new("Model")
 modz.Name = "efx"
@@ -129,19 +134,19 @@ function makemotor(parent, p0, p1, c0, c1)
   return wel
 end
 local konodioda = Instance.new("Sound")
-konodioda.SoundId = "rbxassetid://276263776"
+konodioda.SoundId = "rbxassetid://6675036094"
 konodioda.Volume = 3.5
 konodioda.Parent = hrp
 local bast = Instance.new("Sound")
-bast.SoundId = "rbxassetid://616576465"
+bast.SoundId = "rbxassetid://4825224488"
 bast.Volume = 0.5
 bast.Parent = hrp
 local zaworld = Instance.new("Sound")
-zaworld.SoundId = "rbxassetid://616576400"
+zaworld.SoundId = "rbxassetid://6675036094"
 zaworld.Volume = 0.8
 zaworld.Parent = hrp
 local wry = Instance.new("Sound")
-wry.SoundId = "rbxassetid://276152532"
+wry.SoundId = "rbxassetid://4762401440"
 wry.Volume = 5
 wry.Parent = hrp
 function animo(yep)
@@ -153,7 +158,7 @@ function animo(yep)
     anim.Parent = nil
   end
 end
-animo(false)
+animo(true)
 function lerpz(joint, prop, cfrmz, alp)
   joint[prop] = joint[prop]:lerp(cfrmz, alp)
 end
@@ -168,20 +173,7 @@ lerpz(RH, "C1", RHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
 lerpz(LH, "C0", LHC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
 lerpz(LH, "C1", LHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
 function resetlerp(whoever)
-  if whoever == nil then
-    RJ.C0 = RJC0
-    RJ.C1 = RJC1
-    N.C0 = NC0
-    N.C1 = NC1
-    RS.C0 = RSC0
-    RS.C1 = RSC1
-    LS.C0 = LSC0
-    LS.C1 = LSC1
-    RH.C0 = RHC0
-    RH.C1 = RHC1
-    LH.C0 = LHC0
-    LH.C1 = LHC1
-  elseif whoever ~= nil then
+  if whoever ~= nil then
     nRJ.C0 = RJC0
     nRJ.C1 = RJC1
     nN.C0 = NC0
@@ -195,8 +187,8 @@ function resetlerp(whoever)
     nLH.C0 = LHC0
     nLH.C1 = LHC1
   end
-end 
------- end of dio 
+end
+
 function STANDO(cfr)
   local rooto = Instance.new("Part")
   nooutline(rooto)
@@ -222,7 +214,7 @@ function STANDO(cfr)
   local headmesh = makemesh("Head", Vector3.new(1.25, 1.25, 1.25), nil, head)
   local headdecal = Instance.new("Decal")
   headdecal.Name = "face"
-  headdecal.Texture = "rbxassetid://64064193"
+  headdecal.Texture = "rbxassetid://4457367486"
   headdecal.Face = "Front"
   headdecal.Transparency = 1
   headdecal.Parent = head
@@ -249,20 +241,20 @@ hp2.Size = Vector3.new(0.41, 0.8, 0.2)
 hp2.Transparency = 1
 hp2.CanCollide = false
 hp2.BrickColor = BrickColor.new("Forest green")
- 
- 
+
+
 local hpm2 = Instance.new("SpecialMesh",hp2)
 hpm2.MeshId = "http://www.roblox.com/asset/?id=105992239"
 hpm2.MeshType = "FileMesh"
 hpm2.Scale = Vector3.new(1.1, 1.1, 1.1)
- 
+
 local hpw2 = Instance.new("Weld")
 hpw2.Parent = hp2
 hpw2.Part0 = head
 hpw2.Part1 = hp2
 hpw2.C1 = CFrame.new(0,.41,.6)
- 
- 
+
+
   local torso = Instance.new("Part")
   nooutline(torso)
   torso.Name = "Torso"
@@ -275,7 +267,7 @@ hpw2.C1 = CFrame.new(0,.41,.6)
   torso.Locked = true
   torso.Parent = ZaWarudo
   local torsomesh = makemesh("FileMesh", Vector3.new(1, 1, 1), "rbxasset://fonts/torso.mesh", torso)
- 
+
   local leftarm = Instance.new("Part")
   nooutline(leftarm)
   leftarm.Anchored = false
@@ -288,7 +280,7 @@ hpw2.C1 = CFrame.new(0,.41,.6)
   leftarm.Locked = true
   leftarm.Parent = ZaWarudo
   local leftarmmesh = makemesh("FileMesh", Vector3.new(1, 1, 1), "rbxasset://fonts/leftarm.mesh", leftarm)
- 
+
   local rightarm = Instance.new("Part")
   nooutline(rightarm)
   rightarm.Anchored = false
@@ -301,7 +293,7 @@ hpw2.C1 = CFrame.new(0,.41,.6)
   rightarm.Transparency = 1
   rightarm.Parent = ZaWarudo
   local rightarmmesh = makemesh("FileMesh", Vector3.new(1, 1, 1), "rbxasset://fonts/rightarm.mesh", rightarm)
- 
+
   local leftleg = Instance.new("Part")
   nooutline(leftleg)
   leftleg.Anchored = false
@@ -314,7 +306,7 @@ hpw2.C1 = CFrame.new(0,.41,.6)
   leftleg.Locked = true
   leftleg.Parent = ZaWarudo
   local leftlegmesh = makemesh("FileMesh", Vector3.new(1, 1, 1), "rbxasset://fonts/leftleg.mesh", leftleg)
- 
+
   local rightleg = Instance.new("Part")
   nooutline(rightleg)
   rightleg.Anchored = false
@@ -327,8 +319,8 @@ hpw2.C1 = CFrame.new(0,.41,.6)
   rightleg.Transparency = 1
   rightleg.Parent = ZaWarudo
   local rightlegmesh = makemesh("FileMesh", Vector3.new(1, 1, 1), "rbxasset://fonts/rightleg.mesh", rightleg)
- 
- 
+
+
 ------------Armor
 local arp = Instance.new("Part",ZaWarudo)
 arp.Name = "lap"
@@ -336,12 +328,12 @@ arp.Transparency = 1
 arp.CanCollide = false
 arp.BrickColor = BrickColor.new("Gold")
 arp.Size = Vector3.new(0,0,0)
- 
+
 local smp = Instance.new("SpecialMesh",arp)
 smp.MeshId = "rbxasset://fonts/leftarm.mesh"
 smp.MeshType = "FileMesh"
 smp.Scale = Vector3.new(1.1, 0.4, 1.1)
- 
+
 local weld = Instance.new("Weld")
 weld.Parent = arp
 weld.Part0 = leftarm
@@ -354,12 +346,12 @@ arp1.Transparency = 1
 arp1.CanCollide = false
 arp1.BrickColor = BrickColor.new("Gold")
 arp1.Size = Vector3.new(0,0,0)
- 
+
 local smp1 = Instance.new("SpecialMesh",arp1)
 smp1.MeshId = "rbxasset://fonts/leftarm.mesh"
 smp1.MeshType = "FileMesh"
 smp1.Scale = Vector3.new(0.6, 0.4, 0.5)
- 
+
 local weld1 = Instance.new("Weld")
 weld1.Parent = arp1
 weld1.Part0 = leftarm
@@ -372,18 +364,18 @@ arp2.Transparency = 1
 arp2.CanCollide = false
 arp2.BrickColor = BrickColor.new("Gold")
 arp2.Size = Vector3.new(0,0,0)
- 
+
 local smp2 = Instance.new("SpecialMesh",arp2)
 smp2.MeshId = "rbxasset://fonts/leftarm.mesh"
 smp2.MeshType = "FileMesh"
 smp2.Scale = Vector3.new(0.6, 0.4, 0.5)
- 
+
 local weld2 = Instance.new("Weld")
 weld2.Parent = arp2
 weld2.Part0 = leftarm
 weld2.Part1 = arp2
 weld2.C1 = CFrame.new(-.25,0,0)
- 
+
 --------------------
 local arp3 = Instance.new("Part",ZaWarudo)
 arp3.Name = "lap3"
@@ -391,12 +383,12 @@ arp3.Transparency = 1
 arp3.CanCollide = false
 arp3.BrickColor = BrickColor.new("Gold")
 arp3.Size = Vector3.new(0,0,0)
- 
+
 local smp = Instance.new("SpecialMesh",arp3)
 smp.MeshId = "rbxasset://fonts/leftarm.mesh"
 smp.MeshType = "FileMesh"
 smp.Scale = Vector3.new(1.1, 0.4, 1.1)
- 
+
 local weld = Instance.new("Weld")
 weld.Parent = arp3
 weld.Part0 = rightarm
@@ -409,12 +401,12 @@ arp4.Transparency = 1
 arp4.CanCollide = false
 arp4.BrickColor = BrickColor.new("Gold")
 arp4.Size = Vector3.new(0,0,0)
- 
+
 local smp = Instance.new("SpecialMesh",arp4)
 smp.MeshId = "rbxasset://fonts/leftarm.mesh"
 smp.MeshType = "FileMesh"
 smp.Scale = Vector3.new(0.6, 0.4, 0.5)
- 
+
 local weld = Instance.new("Weld")
 weld.Parent = arp4
 weld.Part0 = rightarm
@@ -427,19 +419,19 @@ arp5.Transparency = 1
 arp5.CanCollide = false
 arp5.BrickColor = BrickColor.new("Gold")
 arp5.Size = Vector3.new(0,0,0)
- 
+
 local smp = Instance.new("SpecialMesh",arp5)
 smp.MeshId = "rbxasset://fonts/leftarm.mesh"
 smp.MeshType = "FileMesh"
 smp.Scale = Vector3.new(0.6, 0.4, 0.5)
- 
+
 local weld = Instance.new("Weld")
 weld.Parent = arp5
 weld.Part0 = rightarm
 weld.Part1 = arp5
 weld.C1 = CFrame.new(.25,0,0)
 --------------------
- 
+
   local rootweld = makemotor(rooto, rooto, torso, RJC0, RJC1)
   rootweld.Name = "RootJoint"
   local neckweld = makemotor(torso, torso, head, NC0, NC1)
@@ -543,7 +535,7 @@ weld.C1 = CFrame.new(.25,0,0)
   pa7.Parent = ZaWarudo
   local pa7m = makemesh("FileMesh", Vector3.new(1.05, 0.201, 1.1), "rbxasset://fonts/torso.mesh", pa7)
   local pa7w = makemotor(pa7, pa7, torso, ang(rd(0), rd(0), rd(0)) * cf(0, 0.8, 0), ang(0, 0, 0))
- 
+  
   local pa9 = Instance.new("Part")
   nooutline(pa9)
   pa9.Anchored = false
@@ -572,7 +564,7 @@ weld.C1 = CFrame.new(.25,0,0)
   pa10.Shape = "Cylinder"
 pa10.Material = "SmoothPlastic"
   local pa10w = makemotor(pa10, pa10, torso, ang(rd(0), rd(0), rd(90)) * cf(0.425, 0, -0.8), ang(0, 0, 0))
- 
+
  local pa10d = Instance.new("Part")
   nooutline(pa10d)
   pa10d.Anchored = false
@@ -602,7 +594,7 @@ pa10d.Material = "SmoothPlastic"
   pa11.Shape = "Cylinder"
 pa11.Material = "SmoothPlastic"
   local pa11w = makemotor(pa11, pa11, torso, ang(rd(0), rd(0), rd(90)) * cf(-0.425, 0, -0.8), ang(0, 0, 0))
- 
+
 local pa11d = Instance.new("Part")
   nooutline(pa11d)
   pa11d.Anchored = false
@@ -718,7 +710,7 @@ pa11d.Material = "SmoothPlastic"
   la5.Parent = ZaWarudo
   local la5m = makemesh("FileMesh", Vector3.new(1.35, 1.35, 1.35), "rbxassetid://105992239", la5)
   local la5w = makemotor(la5, la5, leftarm, ang(rd(0), rd(90), rd(0)) * cf(0.4, 0.7, 0), ang(rd(0), 0, 0))
- 
+  
   local ll3 = Instance.new("Part")
   nooutline(ll3)
   ll3.Anchored = false
@@ -781,7 +773,7 @@ function standappear(nbz)
     wherto = hrp
     addcfr = cf(-2, 1, 2)
     local apear = Instance.new("Sound")
-    apear.SoundId = "rbxassetid://463010917"
+    apear.SoundId = "rbxassetid://4729774926"
     apear.Parent = rot
     apear.Volume = 1.25
     game.Debris:AddItem(apear, 1.5)
@@ -815,7 +807,7 @@ function standappear(nbz)
             n.Transparency = n.Transparency + 0.2
             face.Transparency = face.Transparency + 0.2
             emblem.Transparency = emblem.Transparency + 0.2
- 
+
           end
         end
         if n ~= rot and n ~= embpart then
@@ -823,63 +815,9 @@ function standappear(nbz)
         end
         face.Transparency = 1
         emblem.Transparency = 1
- 
+
       end))
     end
-  end
-end
-function THREATENING()
-  if selected == false or activu == true then
-    return
-  end
-  if POSU == false then
-    POSU = true
-    human.WalkSpeed = 0
-    local d = Instance.new("ParticleEmitter")
-    d.Name = "MENACINGU"
-    d.Lifetime = NumberRange.new(1)
-    d.Rate = 2
-    d.Texture = "rbxassetid://298768656"
-    d.VelocitySpread = 60
-    d.Parent = tors
-    human:SetStateEnabled(3, false)
-    local randomoth = math.random(1, 2)
-    if randomoth == 1 then
-      repeat
-        swait()
-        lerpz(RJ, "C0", RJC0 * cf(0, 0, -0.05) * ang(rd(-5), rd(0), rd(-30)), 0.3)
-        lerpz(N, "C0", NC0 * cf(0, 0, 0) * ang(rd(10), rd(0), rd(30)), 0.3)
-        lerpz(RS, "C0", RSC0 * cf(0, 0, 0) * ang(rd(-20), rd(-20), rd(-5)), 0.3)
-        lerpz(RS, "C1", RSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-        lerpz(LS, "C0", LSC0 * cf(0, 0, 0) * ang(rd(140), rd(-70), rd(-50)), 0.3)
-        lerpz(LS, "C1", LSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-        lerpz(RH, "C0", RHC0 * cf(0, 0, 0) * ang(rd(0), rd(-30), rd(10)), 0.3)
-        lerpz(RH, "C1", RHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-        lerpz(LH, "C0", LHC0 * cf(0.3, 0.1, -0.15) * ang(rd(-20), rd(50), rd(10)), 0.3)
-        lerpz(LH, "C1", LHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(-10)), 0.3)
-      until POSU == false
-    elseif randomoth == 2 then
-      repeat
-        swait()
-        lerpz(RJ, "C0", RJC0 * cf(0, 0, 0) * ang(rd(0), rd(-2), rd(25)), 0.3)
-        lerpz(N, "C0", NC0 * cf(0, 0, 0) * ang(rd(6), rd(0), rd(-50)), 0.3)
-        lerpz(RS, "C0", RSC0 * cf(-0.25, 0.3, -0.5) * ang(rd(-30), rd(-15), rd(200)), 0.3)
-        lerpz(RS, "C1", RSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-        lerpz(LS, "C0", LSC0 * cf(0.25, 0.3, -0.5) * ang(rd(-32), rd(13), rd(-195)), 0.3)
-        lerpz(LS, "C1", LSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-        lerpz(RH, "C0", RHC0 * cf(0, 0, 0) * ang(rd(-10), rd(-15), rd(-10)), 0.3)
-        lerpz(RH, "C1", RHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-        lerpz(LH, "C0", LHC0 * cf(0, 0, 0) * ang(rd(-5), rd(10), rd(-10)), 0.3)
-        lerpz(LH, "C1", LHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      until POSU == false
-    end
-  elseif POSU == true then
-    POSU = false
-    human.WalkSpeed = 16
-    human:SetStateEnabled(3, true)
-    tors.MENACINGU:Destroy()
-    activu = true
-    activu = false
   end
 end
 local EHMMM = 0
@@ -897,7 +835,7 @@ function block()
   activu = true
   human:SetStateEnabled(15, false)
   local de = mouse.KeyUp:connect(function(key)
-    if key == "e" then
+    if key == "x" then
       bep = false
     end
   end)
@@ -971,7 +909,7 @@ function MUDA()
     end))
   end
   local de = mouse.KeyUp:connect(function(key)
-    if key == "r" then
+    if key == "e" then
       bep = false
     end
   end)
@@ -979,7 +917,7 @@ function MUDA()
   blur(leftarm)
 local mudodo = Instance.new("Sound")
   mudodo.Volume = 7.5
-  mudodo.SoundId = "rbxassetid://616593932"
+  mudodo.SoundId = "rbxassetid://6665694197"
 mudodo.Looped = true
   mudodo.Parent = hrp
   mudodo:Play()
@@ -1632,26 +1570,14 @@ mouse.KeyDown:connect(function(key)
   if human.Health <= 0 then
     return
   end
-  if key == "f" then
+  if key == "q" then
     standappear(thenoob)
   end
-  if key == "r" then
+  if key == "e" then
     MUDA()
   end
-  if key == "e" then
+  if key == "x" then
     block()
-  end
-  if key == "v" then
-    cability()
-  end
-  if key == "m" and plr.UserId then
-    THEBEST()
-  end
-  if key == "j" then
-    THREATENING()
-  end
-  if key == "k" then
-    konodioda:Play()
   end
   if key == "l" then
     bast:Play()
@@ -1674,94 +1600,6 @@ game:GetService("RunService").RenderStepped:connect(function()
     local checkfloor = Ray.new(hrp.Position, hrp.CFrame.upVector * -4)
     local checkpart = workspace:FindPartOnRayWithIgnoreList(checkfloor, {chr}, false, false)
     local checkstate = human:GetState()
-    if checkstate.Value == 13 then
-      animpose = "Sitting"
-    elseif hrp.Velocity.y > 1 and checkpart == nil then
-      animpose = "Jumping"
-    elseif hrp.Velocity.y < -1 and checkpart == nil then
-      animpose = "Falling"
-    elseif 1 > (hrp.Velocity * Vector3.new(1, 0, 1)).magnitude then
-      animpose = "Idle"
-    elseif (hrp.Velocity * Vector3.new(1, 0, 1)).magnitude < 35 then
-      animpose = "Walking"
-    elseif (hrp.Velocity * Vector3.new(1, 0, 1)).magnitude > 35 then
-      animpose = "TooFast"
-    end
-    if animpose == "Idle" then
-      sine = sine + charge
-      lerpz(RJ, "C0", RJC0 * cf(0, 0, 0.03 * cos(sine / 60)) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(N, "C0", NC0 * cf(0, 0, 0) * ang(rd(3 - 3 * cos(sine / 60)), rd(0), rd(0)), 0.3)
-      lerpz(RS, "C0", RSC0 * cf(0, 0, 0) * ang(rd(2 - 2 * cos(sine / 60)), rd(2 - 2 * cos(sine / 60)), rd(2 * cos(sine / 60))), 0.3)
-      lerpz(RS, "C1", RSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LS, "C0", LSC0 * cf(0, 0, 0) * ang(rd(2 - 2 * cos(sine / 60)), rd(-2 - 2 * cos(sine / 60)), rd(2 * cos(sine / 60))), 0.3)
-      lerpz(LS, "C1", LSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(RH, "C0", RHC0 * cf(0, 0, 0) * ang(rd(-3 - 1 * cos(sine / 60)), rd(-5 - 1 * cos(sine / 60)), rd(1 * cos(sine / 60))), 0.3)
-      lerpz(RH, "C1", RHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LH, "C0", LHC0 * cf(0, 0, 0) * ang(rd(-3 - 1 * cos(sine / 60)), rd(5 - 1 * cos(sine / 60)), rd(1 * cos(sine / 60))), 0.3)
-      lerpz(LH, "C1", LHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-    end
-    if animpose == "Walking" then
-      sine = sine + charge
-      lerpz(RJ, "C0", RJC0 * cf(0, 0, 0.03 * cos(sine / 60)) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(N, "C0", NC0 * cf(0, 0, 0) * ang(rd(3 - 3 * cos(sine / 60)), rd(0), rd(0)), 0.3)
-      lerpz(RS, "C0", RSC0 * cf(0, 0, 0) * ang(rd(-2 - 2 * cos(sine / 60)), rd(2 - 2 * cos(sine / 60)), rd(30 * cos(sine / 10))), 0.3)
-      lerpz(RS, "C1", RSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LS, "C0", LSC0 * cf(0, 0, 0) * ang(rd(-2 - 2 * cos(sine / 60)), rd(-2 - 2 * cos(sine / 60)), rd(30 * cos(sine / 10))), 0.3)
-      lerpz(LS, "C1", LSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(RH, "C0", RHC0 * cf(0, 0, 0) * ang(rd(-1 - 1 * cos(sine / 60)), rd(-1 - 1 * cos(sine / 60)), rd(-30 * cos(sine / 10))), 0.6)
-      lerpz(RH, "C1", RHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LH, "C0", LHC0 * cf(0, 0, 0) * ang(rd(-1 - 1 * cos(sine / 60)), rd(1 - 1 * cos(sine / 60)), rd(-30 * cos(sine / 10))), 0.6)
-      lerpz(LH, "C1", LHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-    end
-    if animpose == "Jumping" then
-      lerpz(RJ, "C0", RJC0 * cf(0, 0, 0) * ang(rd(5), rd(0), rd(0)), 0.3)
-      lerpz(N, "C0", NC0 * cf(0, 0, 0) * ang(rd(-10), rd(0), rd(0)), 0.3)
-      lerpz(RS, "C0", RSC0 * cf(0, 0, 0) * ang(rd(7), rd(-5), rd(2)), 0.3)
-      lerpz(RS, "C1", RSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LS, "C0", LSC0 * cf(0, 0, 0) * ang(rd(7), rd(5), rd(-3)), 0.3)
-      lerpz(LS, "C1", LSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(RH, "C0", RHC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(-10)), 0.3)
-      lerpz(RH, "C1", RHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LH, "C0", LHC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(20)), 0.3)
-      lerpz(LH, "C1", LHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-    end
-    if animpose == "Falling" then
-      lerpz(RJ, "C0", RJC0 * cf(0, 0, 0) * ang(rd(-6), rd(0), rd(0)), 0.3)
-      lerpz(N, "C0", NC0 * cf(0, 0, 0) * ang(rd(20), rd(0), rd(0)), 0.3)
-      lerpz(RS, "C0", RSC0 * cf(0, 0, 0) * ang(rd(7), rd(-5), rd(2)), 0.3)
-      lerpz(RS, "C1", RSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LS, "C0", LSC0 * cf(0, 0, 0) * ang(rd(7), rd(5), rd(-3)), 0.3)
-      lerpz(LS, "C1", LSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(RH, "C0", RHC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(10)), 0.3)
-      lerpz(RH, "C1", RHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LH, "C0", LHC0 * cf(-0.65, 0.75, 0) * ang(rd(0), rd(0), rd(20)), 0.3)
-      lerpz(LH, "C1", LHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-    end
-    if animpose == "TooFast" then
-      lerpz(RJ, "C0", RJC0 * cf(0, 0, -1.5) * ang(rd(20), rd(0), rd(0)), 0.3)
-      lerpz(N, "C0", NC0 * cf(0, 0, 0) * ang(rd(20), rd(0), rd(0)), 0.3)
-      lerpz(RS, "C0", RSC0 * cf(0, 0, 0) * ang(rd(-20), rd(-10), rd(-10)), 0.3)
-      lerpz(RS, "C1", RSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LS, "C0", LSC0 * cf(0, -0.75, 0) * ang(rd(10), rd(-80), rd(-10)), 0.3)
-      lerpz(LS, "C1", LSC1 * cf(0, 0, 0) * ang(rd(30), rd(0), rd(0)), 0.3)
-      lerpz(RH, "C0", RHC0 * cf(0.75, 1.5, 0) * ang(rd(0), rd(0), rd(30)), 0.3)
-      lerpz(RH, "C1", RHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LH, "C0", LHC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(50)), 0.3)
-      lerpz(LH, "C1", LHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-    end
-    if animpose == "Sitting" then
-      lerpz(RJ, "C0", RJC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(N, "C0", NC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(RS, "C0", RSC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(90)), 0.3)
-      lerpz(RS, "C1", RSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LS, "C0", LSC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(-90)), 0.3)
-      lerpz(LS, "C1", LSC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(RH, "C0", RHC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(90)), 0.3)
-      lerpz(RH, "C1", RHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-      lerpz(LH, "C0", LHC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(-90)), 0.3)
-      lerpz(LH, "C1", LHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
-    end
-  end
   if appeared == false and activu == false then
     lerpz(nRJ, "C0", RJC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
     lerpz(nN, "C0", NC0 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
@@ -1786,6 +1624,7 @@ game:GetService("RunService").RenderStepped:connect(function()
     lerpz(nLH, "C0", LHC0 * cf(0, 0, 0) * ang(rd(-2 - 2 * cos(sine / 100)), rd(3 - 3 * cos(sine / 100)), rd(2 - 2 * cos(sine / 100))), 0.3)
     lerpz(nLH, "C1", LHC1 * cf(0, 0, 0) * ang(rd(0), rd(0), rd(0)), 0.3)
   end
+  end
 end)
 function dispose()
   for i, v in pairs(getfenv(0)) do
@@ -1805,251 +1644,3 @@ local p = game.Players.LocalPlayer
 local char = p.Character
 local hed = char.Head
 local LocalPlayer = p
- 
-local Player = game.Players.localPlayer
-local Character = p.Character
-local LeftArm2 = Character["Left Arm"]
-local RightArm2 = Character["Right Arm"]
-local LeftLeg2 = Character["Left Leg"]
-local RightLeg2 = Character["Right Leg"]
-local Head2 = Character.Head
-local Torso2 = Character.Torso
- 
---created by SoldierJoao
---Credits to metabee for the knives edit
-cut = Instance.new("Sound", Character)
-cut.SoundId = "https://www.roblox.com/asset/?id=0"
-cut.Volume = 1.5
-thri = Instance.new("Sound", Character)
-thri.SoundId = "https://www.roblox.com/asset/?id=186311262"
-thri.Volume = 2.5
-WRY = Instance.new("Sound", Character)
-WRY.SoundId = "https://www.roblox.com/asset/?id=276152532"
-WRY.Volume = 5
- 
-local Players=game:service'Players'
-local Player=Players.LocalPlayer
-local Mouse=Player:GetMouse''
-local RenderStepped=game:service'RunService'.RenderStepped
- 
-local MeshId='http://www.roblox.com/asset?id=202083123'
-local TextureId='http://www.roblox.com/asset/?id=189436355'
- 
-local BeeSpeed= 100
- 
-local QHold=false
-local EHold=false
- 
-Mouse.Button1Down:connect(function()
- 
-cut:Play()
-if Mouse.Target and canworld == false then
- 
-local Bee=Instance.new('Part',Player.Character)
-Bee.CanCollide=false
-Bee.Size=Vector3.new(2,2,2)
-Bee.CFrame=Player.Character.Torso.CFrame
-local BeeMesh=Instance.new('SpecialMesh',Bee)
-BeeMesh.MeshType='FileMesh'
-BeeMesh.MeshId=MeshId
-BeeMesh.TextureId=TextureId
-BeeMesh.Scale=Vector3.new(1,1,1)
-local BodyVel=Instance.new('BodyVelocity',Bee)
-BodyVel.maxForce=Vector3.new(math.huge,math.huge,math.huge)
-local BodyGyro=Instance.new('BodyGyro',Bee)
-BodyGyro.maxTorque=Vector3.new(math.huge,math.huge,math.huge)
-BodyGyro.P=2e4
-coroutine.wrap(function()
-RenderStepped:connect(function()
-BodyGyro.cframe=CFrame.new(Bee.Position,Mouse.Hit.p)
-BodyVel.velocity=Bee.CFrame.lookVector*BeeSpeed
-end)
-end)()
-Bee.Touched:connect(function(p)
-if p.Parent~=Player.Character and p.Parent:FindFirstChild'Humanoid'then
-p.Parent:BreakJoints()
-Bee:Destroy''
-thri:Play()
-end
-end)
-end
-end)
- 
- 
-Mouse.KeyDown:connect(function(k)
-local Key=k:lower''
-if Key=='q'then
-QHold=true
-elseif Key=='e'then
-EHold=true
-end
-end)
- 
-Mouse.KeyUp:connect(function(k)
-local Key=k:lower''
-if Key=='q'then
-QHold=false
-elseif Key=='e'then
-EHold=false
-end
-end)
- 
-coroutine.wrap(function()
-RenderStepped:connect(function()
-if QHold then
-if BeeSpeed>0 then
-BeeSpeed=BeeSpeed-1
-end
-elseif EHold then
-BeeSpeed=BeeSpeed+1
-end
-end)
-end)()
- 
- 
- 
- 
-mse = Player:GetMouse()
- 
-sound2 = Instance.new("Sound", Character)
-sound2.SoundId = "https://www.roblox.com/asset/?id=864569342"
-sound2.Volume = 2.5
-sound4 = Instance.new("Sound", Character)
-sound4.SoundId = "https://www.roblox.com/asset/?id=616576400"
-sound4.Volume = 2
-TSTheme = Instance.new("Sound", Character)
-TSTheme.SoundId = "https://www.roblox.com/asset/?id=172374380"
-TSTheme.Volume = 2
-canworld = true
-mse.KeyDown:connect(function(key)
-	key = key:lower()
-	if key == "t" then
-                sound4:Play()
-		if canworld == false then return end
-		if canworld then
-		canworld = false
-		TSTheme:Play()
- 
-		local function spawnpart()
-		sphere = Instance.new("Part")
-		--game.Debris:AddItem(sphere,3)
-		local sm = Instance.new("SpecialMesh", sphere)
-		sm.MeshType = "Sphere"
-		sphere.Transparency = 0.5
-		sphere.Anchored = true
-		sphere.CanCollide = false
-		sphere.Material = "Neon"
-		sphere.BrickColor = BrickColor.new("Black")
-		end
- 
-		local function weld(lol)
-			local weld = Instance.new("Weld", Player.Character.Torso)
-			weld.Part0 = Player.Character.Torso
-			weld.Part1 = lol
-			weld.C0 = Player.Character.Torso.CFrame:inverse()
-			weld.C1 = lol.CFrame:inverse()
-		end
-		wait()
-		spawnpart()
-			for i, v in pairs(game.Players:GetChildren()) do
-			t = v.Character:FindFirstChild("Torso")
-			if t then
-				t.Anchored = true
-				Player.Character:FindFirstChild("Torso").Anchored = false
-			end
-			RA = v.Character:FindFirstChild("Right Arm")
-			if RA then
-				RA.Anchored = true
-				Player.Character:FindFirstChild("Right Arm").Anchored = false
-			end
-			LA = v.Character:FindFirstChild("Left Arm")
-			if LA then
-				LA.Anchored = true
-				Player.Character:FindFirstChild("Left Arm").Anchored = false
-			end
-			RL = v.Character:FindFirstChild("Right Leg")
-			if RL then
-				RL.Anchored = true
-				Player.Character:FindFirstChild("Right Leg").Anchored = false
-			end
-			LL = v.Character:FindFirstChild("Left Leg")
-			if LL then
-				LL.Anchored = true
-				Player.Character:FindFirstChild("Left Leg").Anchored = false
-			end
-		end
-		weld(sphere)
-		cce = Instance.new("ColorCorrectionEffect", game.Lighting)
-		cce.Saturation = -5
-		--game.Debris:AddItem(cce, 5)
-		sphere.Parent = Character.Torso
-		for i = 1,3 do
-			sphere.Size = sphere.Size + Vector3.new(50,50,50)
-			wait()
-			end
-wait()
-                        sphere:Destroy()
-BeeSpeed = 0
-		cce.Saturation = -0.1
-		wait(0.3)
-		cce.Saturation = -0.2
-		wait(0.3)
-		cce.Saturation = -0.3
-		wait(0.2)
-	        cce.Saturation = -1.5
-                wait()
-		end
-	end
-end
-)
-if canworld == false then
-	wait(9)
-	canworld = true
-end
- 
-mse.KeyDown:connect(function(key)
-	key = key:lower()
-	if key == "y" then
-canworld = true
-		sound2:Play()
-wait()
-BeeSpeed = 1
-		cce.Saturation = -1.3
-		wait(0.5)
-BeeSpeed = 1.2
-		cce.Saturation = -0.5
-		wait(0.5)
-BeeSpeed = 1.4
-		cce.Saturation = -0.4
-		wait(0.3)
-BeeSpeed = 1.5
-		cce.Saturation = -0.2
-		wait(0.2)
-	        cce.Saturation = 0
- 
-		for i, v in pairs(game.Players:GetChildren()) do
-		t = v.Character:FindFirstChild("Torso")
-			if t then
-				t.Anchored = false
-			end
-			RA = v.Character:FindFirstChild("Right Arm")
-			if RA then
-				RA.Anchored = false
-			end
-			LA = v.Character:FindFirstChild("Left Arm")
-			if LA then
-				LA.Anchored = false
-			end
-			RL = v.Character:FindFirstChild("Right Leg")
-			if RL then
-				RL.Anchored = false
-			end
-			LL = v.Character:FindFirstChild("Left Leg")
-			if LL then
-				LL.Anchored = false
-			end
-		end
-BeeSpeed = 100
-TSTheme:Stop()
-end
-end)
